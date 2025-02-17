@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>INICIO</title>
+
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   
+
+</head>
+<body> 
+  
+    <nav id="navegacionn" class="fixed top-0 right-0 left-0  bg-blue-300 h-16">
+    </nav>
+
+    <div class=" pt-16 h-screen px-4 flex max-w-7xl mx-auto justify-center items-center">
+        <form id="formulario" class="flex flex-col gap-4 bg-blue-500 p-4 rounded-lg text-lg lg:w-2/5 shadow-xl">
+            
+            <div class="flex flex-col gap-2">
+                <label for="email-input" class="font-bold">
+                    Email <span class="text-red-500">*</span>
+                </label>
+                <input type="email" id="email-input" autocomplete="off" placeholder="Jean123@gmail.com"
+                class="rounded-lg p-2 focus:outline-blue-600">
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="password-input" class="font-bold">
+                    Password <span class="text-red-500">*</span>
+                </label>
+                <input type="password" id="password-input" autocomplete="off" 
+                class="rounded-lg p-2 focus:outline-blue-600">
+                <p id="texto-error"></p>
+            </div>
+
+            <button class="bg-blue-300 px-4 rounded-lg font-bold hover:bg-blue-700 py-2 transition ease-in-out">
+                Iniciar Sesión
+            </button>
+        </form>
+    </div>
+      
+    <script src="../components/nav.js"></script>
+    <script src="login.js"></script>
+
+</body>
+</html>

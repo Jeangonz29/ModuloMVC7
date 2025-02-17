@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>REGISTRO</title>
+   
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+<body> 
+   
+    <nav id="navegacionn" class="fixed top-0 right-0 left-0 bg-blue-300 h-16">
+    </nav>
+    
+    <div id="notificacion" class="fixed top-20 left-0 right-0"></div>
+
+    <div class=" flex max-w-7xl mx-auto mt-16 justify-center items-center gap-4">
+        <form id="formulario" class="flex flex-col gap-4 bg-blue-500 p-4 rounded-lg text-lg lg:w-2/5 shadow-xl">
+            <div class="flex flex-col gap-2">
+                <label for="name-input" class="font-bold">
+                    Nombre <span class="text-red-500">*</span>
+                </label>
+                <input type="text" id="name-input" autocomplete="off" placeholder="Jeanfreider"
+                class="rounded-lg p-2 focus:outline-blue-600">
+                <p class="text-xs">Este campo es obligatorio</p>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="email-input" class="font-bold">
+                    Email <span class="text-red-500">*</span>
+                </label>
+                <input type="email" id="email-input" autocomplete="off" placeholder="Jean123@gmail.com"
+                class="rounded-lg p-2 focus:outline-blue-600">
+                <p class="text-xs">El correo es obligatorio</p>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="password-input" class="font-bold">
+                    Password <span class="text-red-500">*</span>
+                </label>
+                <input type="password" id="password-input" autocomplete="off" 
+                class="rounded-lg p-2 focus:outline-blue-600">
+                <p class="text-xs">Debe tener al menos una letra <br>
+                Debe tener al menos un numero <br>
+                Debe tener al menos una mayusculas <br>
+                Debe tener entre 8 y 16 caracteres <br>
+                Debe tener al menos un caracter especial</p>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label for="match-input" class="font-bold">
+                    Confirmar password <span class="text-red-500">*</span>
+                </label>
+                <input type="password" id="match-input" 
+                class="rounded-lg p-2 focus:outline-blue-600">
+                <p class="text-xs">Debe coincidir con el password anterior</p>
+            </div>
+
+
+            <button id="form-btn" disabled class="bg-blue-300 px-4 rounded-lg font-bold hover:bg-blue-700 py-2 transition ease-in-out disabled:opacity-50 disabled:cursor-not-allowed">
+                Registrar
+            </button>
+        </form>
+        <div class="mt-7">
+            <img src="/images/registro.svg" alt="img de registro">
+        </div>
+    </div>
+
+      
+    <script src="../components/nav.js"></script>
+    <script type="module" src="index.js"></script>
+    <script type="module" src="../components/notificaciones.js"></script>
+    <!--Para exportarlo-->
+</body>
+</html>
